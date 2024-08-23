@@ -1,7 +1,14 @@
-# pyTchat
-### Python Terminal Chat 
+# pyTxTchat
+### Python Terminal Text Chat 
 - using Apache Kafka
 
+### using
+```
+$ pip install pytxtchat
+
+$ pytxtchat-ping
+pong
+```
 
 ### if you're a developer
 ```bash
@@ -14,12 +21,8 @@ $ pdm install
 $ pytest --cov
 ================ test session starts =================
 platform linux -- Python 3.11.9, pytest-8.3.2, pluggy-1.5.0
-rootdir: /home/diginori/code/pytchat
 configfile: pyproject.toml
 plugins: cov-5.0.0
-collected 1 item                                                                                                                                                                             
-
-tests/test_com.py .                                                                                                                                                                    [100%]
 
 ---------- coverage: platform linux, python 3.11.9-final-0 -----------
 Name                      Stmts   Miss  Cover

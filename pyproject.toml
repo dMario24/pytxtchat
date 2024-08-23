@@ -1,5 +1,5 @@
 [project]
-name = "pytchat"
+name = "pytxtchat"
 version = "0.1.0"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
@@ -9,13 +9,13 @@ dependencies = [
     "textual>=0.77.0",
     "textual-dev>=1.5.1",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "GNU"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true
 
 [tool.pdm.dev-dependencies]
 test = [
@@ -27,8 +27,8 @@ test = [
 pythonpath = "src"
 
 [project.urls]
-Homepage = "https://github.com/dMario24/pytchat"
-Issues = "https://github.com/dMario24/pytchat/issues"
+Homepage = "https://github.com/dMario24/pytxtchat"
+Issues = "https://github.com/dMario24/pytxtchat/issues"
 
 [project.scripts]
-pytchat-ping = 'pytchat.cli:ping'
+pytxtchat-ping = 'pytchat.cli:ping'

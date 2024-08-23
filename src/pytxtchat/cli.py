@@ -1,4 +1,4 @@
-from pytchat.com import pong
+from pytxtchat.com import pong
 
 def ping():
     msg = pong()
