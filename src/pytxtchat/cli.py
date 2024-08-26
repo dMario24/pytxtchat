@@ -1,5 +1,6 @@
 from pytxtchat.com import pong
-from pytxtchat.textual import StopwatchApp
+from pytxtchat.textual.stopwatch import StopwatchApp
+from pytxtchat.textual.chat import ChatApp
 
 def ping():
     msg = pong()
@@ -9,3 +10,8 @@ def ping():
 def run_stopwatch():
     app = StopwatchApp()
     app.run()
+
+def run_chat():
+    app = ChatApp()
+    app.run()
+

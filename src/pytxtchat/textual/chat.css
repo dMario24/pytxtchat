@@ -34,6 +34,6 @@ HomeScreen .home_screen_container {
 HomeScreen .button_widget {
     width: 10%;
     margin: 1 1 1 1;
-    border: blank white;
+    border: blank rgb(255, 255, 255);
     background: black;
 }

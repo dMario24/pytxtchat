@@ -3,6 +3,7 @@ from textual.app import App, ComposeResult
 from textual.screen import Screen
 from textual.containers import Container, Vertical
 from textual.widgets import Input, RichLog, Button
+from textual.widgets import Header, Footer
 
 
 class HomeScreen(Screen):
@@ -25,6 +26,13 @@ class HomeScreen(Screen):
 class ChatScreen(Screen):
     
     def compose(self) -> ComposeResult:
+        yield Header(
+            show_clock = True,
+            icon = "💬"
+        )
+        yield Footer(
+            show_command_palette = False
+        )
         yield Vertical(
             RichLog(classes="richlog_widget"),
             Input(placeholder="Enter chat", classes="input_widget"),
@@ -45,6 +53,7 @@ class ChatApp(App):
     
     def on_mount(self) -> None:
         self.app.push_screen(HomeScreen())
+        self.title = "Terminal-based chat with Kafka and Python"
 
 
 if __name__  == "__main__":

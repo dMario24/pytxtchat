@@ -1,6 +1,6 @@
 [project]
 name = "pytxtchat"
-version = "0.2.0"
+version = "0.3.0"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -33,3 +33,4 @@ Issues = "https://github.com/dMario24/pytxtchat/issues"
 [project.scripts]
 pytxtchat-ping = 'pytxtchat.cli:ping'
 ptc-sw = 'pytxtchat.cli:run_stopwatch'
+ptc-chat = 'pytxtchat.cli:run_chat'
