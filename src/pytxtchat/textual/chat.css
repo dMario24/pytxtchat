@@ -1,0 +1,39 @@
+ChatScreen {
+    background: black;
+}
+
+ChatScreen .vertical_layout {
+    align: center middle;
+    background: black;
+}
+
+ChatScreen .input_widget {
+    width: 100%;
+    margin-top: 1;
+    margin-bottom: 1;
+    border: white;
+}
+
+ChatScreen .richlog_widget {
+    align: center middle;
+    background: black;
+    scrollbar-size-vertical: 1;
+    scrollbar-color: white;
+    border: white;
+}
+
+
+HomeScreen {
+    background: black;
+}
+
+HomeScreen .home_screen_container {
+    align: center middle;
+}
+
+HomeScreen .button_widget {
+    width: 10%;
+    margin: 1 1 1 1;
+    border: blank white;
+    background: black;
+}
