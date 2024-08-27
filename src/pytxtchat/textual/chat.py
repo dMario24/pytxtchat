@@ -14,12 +14,15 @@ from pytxtchat.kafka.consumer import create_consumer
 
 from textual.reactive import reactive
 
+from rich.text import Text
+from rich.panel import Panel
+
 import random
 
 # 
 CHAT_ROOM = ""
 CHAT_ID = ""
-CHAT_SERVERS=""
+CHAT_SERVERS=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092']
 
 class HomeScreen(Screen):
     
@@ -39,7 +42,7 @@ class HomeScreen(Screen):
             global CHAT_ROOM, CHAT_ID, CHAT_SERVERS
             CHAT_ROOM = self.query_one("#chat_room_input_widget", Input).value
             CHAT_ID = self.query_one("#chat_id_input_widget", Input).value
-            CHAT_SERVERS = self.query_one("#chat_servers_input_widget", Input).value.split(",")
+            # CHAT_SERVERS = self.query_one("#chat_servers_input_widget", Input).value.split(",")
             self.app.push_screen(ChatScreen())
         elif event.button.id == "exit":
             self.app.exit()
@@ -56,6 +59,7 @@ class ChatScreen(Screen):
             severity="information", #warning #error
         )
         self.kafka_producer = create_producer(CHAT_SERVERS)
+        self.screen.styles.border = ("heavy", "white")
 
     def compose(self) -> ComposeResult:
         yield Header(
@@ -66,7 +70,7 @@ class ChatScreen(Screen):
             show_command_palette = False
         )
         yield Vertical(
-            RichLog(classes="chat_history_widget"),
+            RichLog(classes="chat_history_widget", min_width=self.app.size.width - 6),
             Input(placeholder="Enter chat", classes="chat_input_widget"),
             classes="vertical_layout"
         )
@@ -92,7 +96,19 @@ class ChatScreen(Screen):
 
         chat_history_widget = self.query_one(RichLog)
         for m in consumer:
-            chat_history_widget.write(f"{CHAT_ROOM}:{m.value}")
+            data = m.value
+            to = data['to']
+            msg = data['msg']
+
+            if to == CHAT_ID:
+                justify_value = "right"
+                style_value = "bold white"
+            else:
+                justify_value = "left"
+                style_value = "bold green"
+ 
+            text_prod = Text(f"{to}: {msg}", style=style_value, justify=justify_value)
+            chat_history_widget.write(text_prod)
 
 
 class ChatApp(App):
