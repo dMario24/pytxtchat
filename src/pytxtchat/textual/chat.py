@@ -28,8 +28,8 @@ class HomeScreen(Screen):
             Input(placeholder="Chat Room", classes="chat_setting_input_widget", id="chat_room_input_widget"),
             Input(placeholder="Chat ID", classes="chat_setting_input_widget", id="chat_id_input_widget"),
             Input(placeholder="Chat Server A:9092,B:9092", classes="chat_setting_input_widget", id="chat_servers_input_widget"),
-            Button("Get Started", id="get_started", classes="button_widget"),
-            Button("Exit", id="exit", classes="button_widget"),
+            Button("Jumping into the world", id="get_started", classes="button_widget"),
+            Button("Backward step", id="exit", classes="button_widget"),
             classes="home_screen_container",
         )
         

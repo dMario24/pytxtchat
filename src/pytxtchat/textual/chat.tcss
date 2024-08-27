@@ -32,14 +32,14 @@ HomeScreen .home_screen_container {
 }
 
 HomeScreen .chat_setting_input_widget {
-    width: 10%;
+    width: 80%;
 }
 
 HomeScreen .button_widget {
-    width: 10%;
-    margin: 1 1 1 1;
-    border: blank rgb(255, 255, 255);
-    background: black;
+    width: 80%;
+    /* margin: 1 1 1 1; */
+    /* border: blank rgb(255, 255, 255); */
+    /* background: black; */
 }
 
 ToastRack {
