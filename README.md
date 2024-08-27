@@ -3,12 +3,22 @@
 - using Apache Kafka
 
 ### using
+- ping
 ```
 $ pip install pytxtchat
 
-$ pytxtchat-ping
+$ txtping
 pong
 ```
+
+- chat
+```bash
+$ txtchat
+```
+
+![chathome](https://github.com/user-attachments/assets/067127c4-4e61-4755-9b3c-763b0d7a6e2d)
+
+![chatui](https://github.com/user-attachments/assets/acccd899-e264-479c-9450-4030bd5ec0a6)
 
 ### if you're a developer
 ```bash
@@ -41,3 +51,4 @@ TOTAL                         6      0   100%
 
 ### Ref
 - https://textual.textualize.io/getting_started
+- [recursive-include tcss](https://docs.python.org/ko/3.8/distutils/sourcedist.html)

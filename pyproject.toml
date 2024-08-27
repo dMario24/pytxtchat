@@ -1,6 +1,6 @@
 [project]
 name = "pytxtchat"
-version = "0.1.0"
+version = "0.3.1"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -8,6 +8,8 @@ authors = [
 dependencies = [
     "textual>=0.77.0",
     "textual-dev>=1.5.1",
+    "kafka-python>=2.0.2",
+    "httpx>=0.27.0",
 ]
 requires-python = ">=3.9"
 readme = "README.md"
@@ -31,4 +33,7 @@ Homepage = "https://github.com/dMario24/pytxtchat"
 Issues = "https://github.com/dMario24/pytxtchat/issues"
 
 [project.scripts]
-pytxtchat-ping = 'pytchat.cli:ping'
+txtping = 'pytxtchat.cli:ping'
+txtchat = 'pytxtchat.cli:run_chat'
+txtstopwatch = 'pytxtchat.cli:run_stopwatch'
+txtweather = 'pytxtchat.cli:run_weather'
