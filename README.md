@@ -6,7 +6,7 @@
 ```
 $ pip install pytxtchat
 
-$ pytxtchat-ping
+$ txt-ping
 pong
 ```
 
@@ -41,3 +41,4 @@ TOTAL                         6      0   100%
 
 ### Ref
 - https://textual.textualize.io/getting_started
+- [recursive-include tcss](https://docs.python.org/ko/3.8/distutils/sourcedist.html)

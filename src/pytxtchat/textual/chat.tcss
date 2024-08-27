@@ -7,14 +7,14 @@ ChatScreen .vertical_layout {
     background: black;
 }
 
-ChatScreen .input_widget {
+ChatScreen .chat_input_widget {
     width: 100%;
     margin-top: 1;
     margin-bottom: 1;
     border: white;
 }
 
-ChatScreen .richlog_widget {
+ChatScreen .chat_history_widget {
     align: center middle;
     background: black;
     scrollbar-size-vertical: 1;
@@ -31,9 +31,17 @@ HomeScreen .home_screen_container {
     align: center middle;
 }
 
+HomeScreen .chat_setting_input_widget {
+    width: 10%;
+}
+
 HomeScreen .button_widget {
     width: 10%;
     margin: 1 1 1 1;
     border: blank rgb(255, 255, 255);
     background: black;
+}
+
+ToastRack {
+    align: right top;
 }

@@ -8,6 +8,8 @@ authors = [
 dependencies = [
     "textual>=0.77.0",
     "textual-dev>=1.5.1",
+    "kafka-python>=2.0.2",
+    "httpx>=0.27.0",
 ]
 requires-python = ">=3.9"
 readme = "README.md"
@@ -31,6 +33,7 @@ Homepage = "https://github.com/dMario24/pytxtchat"
 Issues = "https://github.com/dMario24/pytxtchat/issues"
 
 [project.scripts]
-pytxtchat-ping = 'pytxtchat.cli:ping'
-ptc-sw = 'pytxtchat.cli:run_stopwatch'
-ptc-chat = 'pytxtchat.cli:run_chat'
+txtping = 'pytxtchat.cli:ping'
+txtchat = 'pytxtchat.cli:run_chat'
+txtstopwatch = 'pytxtchat.cli:run_stopwatch'
+txtweather = 'pytxtchat.cli:run_weather'
