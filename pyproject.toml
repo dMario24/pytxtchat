@@ -1,6 +1,6 @@
 [project]
 name = "pytxtchat"
-version = "0.3.0"
+version = "0.3.1"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},

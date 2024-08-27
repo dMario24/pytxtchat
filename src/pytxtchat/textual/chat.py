@@ -42,7 +42,7 @@ class HomeScreen(Screen):
             global CHAT_ROOM, CHAT_ID, CHAT_SERVERS
             CHAT_ROOM = self.query_one("#chat_room_input_widget", Input).value
             CHAT_ID = self.query_one("#chat_id_input_widget", Input).value
-            # CHAT_SERVERS = self.query_one("#chat_servers_input_widget", Input).value.split(",")
+            CHAT_SERVERS = self.query_one("#chat_servers_input_widget", Input).value.split(",")
             self.app.push_screen(ChatScreen())
         elif event.button.id == "exit":
             self.app.exit()
