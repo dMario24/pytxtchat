@@ -22,7 +22,7 @@ import random
 # 
 CHAT_ROOM = ""
 CHAT_ID = ""
-CHAT_SERVERS=['ec2-43-203-210-250.ap-northeast-2.compute.amazonaws.com:9092']
+CHAT_SERVERS=""
 
 class HomeScreen(Screen):
     
