@@ -51,5 +51,6 @@ txtweatherpf = 'pytxtchat.cli:weather_fire'
 txtweatherpt = 'pytxtchat.cli:weather_typer'
 txtparquet = 'pytxtchat.cli:print_parquet_path'
 txtsmovie = 'pytxtchat.cli:print_search_movie'
+txtgmovie = 'pytxtchat.cli:print_group_count'
 
 

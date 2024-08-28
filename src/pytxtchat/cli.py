@@ -3,7 +3,10 @@ from pytxtchat.textual.stopwatch import StopwatchApp
 from pytxtchat.textual.chat import ChatApp
 from pytxtchat.textual.weather import WeatherApp
 
-from pytxtchat.data.manager import get_parquet_path, search_movie
+from pytxtchat.data.manager import (
+    get_parquet_path, 
+    search_movie,
+    show_group_count)
 
 import typer, fire
 import requests
@@ -48,3 +51,6 @@ def print_parquet_path():
 
 def print_search_movie():
      fire.Fire(search_movie)
+
+def print_group_count():
+    typer.run(show_group_count)

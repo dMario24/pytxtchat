@@ -58,3 +58,27 @@ def search_movie(word: str, column='movieNm', isprint='True', tablefmt='github')
     if isprint.lower() == 'true':
        print(t)
     return t
+
+def show_group_count(column='year', star="False", limit=10):
+    """
+    특정 컬럼을 기준으로 그룹화하여 데이터 개수를 세고 시각화하는 함수
+
+    Args:
+      column (str, optional): 그룹화할 컬럼 명 (기본값: 'year').
+      star (str, optional): 그래프 축 라벨에 별 문자 사용 여부 (기본값: "False"). 'True'이면 사용, 'False'이면 사용하지 않음.
+      limit (int, optional): 상위 N개 그룹만 표시할지 여부 (기본값: 10).
+
+    Returns:
+      None
+    """
+    df = get_dataframe()
+    gdf = df.groupby(column).size().to_frame(name='cnt').sort_values('cnt', ascending=False)
+
+    if len(gdf) > 10:
+        gdf = gdf.head(int(limit))
+        
+    
+    fdf = gdf.sort_values(column, ascending=True).reset_index()
+    fig = tpl.figure()
+    fig.barh(fdf['cnt'], fdf[column], force_ascii=(star.lower() == 'true'))
+    fig.show()
