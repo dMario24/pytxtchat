@@ -1,1 +1,1 @@
-recursive-include src *.tcss
+recursive-include src *.tcss *.parquet
