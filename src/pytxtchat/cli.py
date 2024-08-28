@@ -2,6 +2,9 @@ from pytxtchat.com import pong
 from pytxtchat.textual.stopwatch import StopwatchApp
 from pytxtchat.textual.chat import ChatApp
 from pytxtchat.textual.weather import WeatherApp
+
+from pytxtchat.data.manager import get_parquet_path, search_movie
+
 import typer, fire
 import requests
 
@@ -30,7 +33,6 @@ def weather_typer():
 
 def print_weather(city: str, lang='ko') -> None:
     """날씨를 알려드립니다.
-    
     https://wttr.in/:help
     
     Args:
@@ -40,3 +42,9 @@ def print_weather(city: str, lang='ko') -> None:
     url = f"https://wttr.in/{city}?lang={lang}"
     response = requests.get(url)
     print(response.text)
+
+def print_parquet_path():
+    typer.run(get_parquet_path)
+
+def print_search_movie():
+     fire.Fire(search_movie)

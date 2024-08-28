@@ -49,3 +49,7 @@ txtstopwatch = 'pytxtchat.cli:run_stopwatch'
 txtweather = 'pytxtchat.cli:run_weather'
 txtweatherpf = 'pytxtchat.cli:weather_fire'
 txtweatherpt = 'pytxtchat.cli:weather_typer'
+txtparquet = 'pytxtchat.cli:print_parquet_path'
+txtsmovie = 'pytxtchat.cli:print_search_movie'
+
+
