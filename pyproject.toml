@@ -1,6 +1,6 @@
 [project]
 name = "pytxtchat"
-version = "0.1.0"
+version = "0.4.0"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -8,6 +8,15 @@ authors = [
 dependencies = [
     "textual>=0.77.0",
     "textual-dev>=1.5.1",
+    "kafka-python>=2.0.2",
+    "httpx>=0.27.0",
+    "typer>=0.12.5",
+    "pandas>=2.2.2",
+    "pyarrow>=17.0.0",
+    "termplotlib>=0.3.9",
+    "tabulate>=0.9.0",
+    "seaborn>=0.13.2",
+    "matplotlib>=3.9.2",
 ]
 requires-python = ">=3.9"
 readme = "README.md"
@@ -22,6 +31,9 @@ test = [
     "pytest>=8.3.2",
     "pytest-cov>=5.0.0",
 ]
+note = [
+    "jupyterlab>=4.2.5",
+]
 
 [tool.pytest.ini_options]
 pythonpath = "src"
@@ -31,4 +43,14 @@ Homepage = "https://github.com/dMario24/pytxtchat"
 Issues = "https://github.com/dMario24/pytxtchat/issues"
 
 [project.scripts]
-pytxtchat-ping = 'pytchat.cli:ping'
+txtping = 'pytxtchat.cli:ping'
+txtchat = 'pytxtchat.cli:run_chat'
+txtstopwatch = 'pytxtchat.cli:run_stopwatch'
+txtweather = 'pytxtchat.cli:run_weather'
+txtweatherpf = 'pytxtchat.cli:weather_fire'
+txtweatherpt = 'pytxtchat.cli:weather_typer'
+txtparquet = 'pytxtchat.cli:print_parquet_path'
+txtsmovie = 'pytxtchat.cli:print_search_movie'
+txtgmovie = 'pytxtchat.cli:print_group_count'
+
+
