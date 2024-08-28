@@ -1,6 +1,6 @@
 [project]
 name = "pytxtchat"
-version = "0.4.0"
+version = "0.5.0"
 description = "Python Terminal Chat Using Apache Kafka"
 authors = [
     {name = "dMario24", email = "data.mario24@gmail.com"},
@@ -52,5 +52,6 @@ txtweatherpt = 'pytxtchat.cli:weather_typer'
 txtparquet = 'pytxtchat.cli:print_parquet_path'
 txtsmovie = 'pytxtchat.cli:print_search_movie'
 txtgmovie = 'pytxtchat.cli:print_group_count'
+txtbot = 'pytxtchat.cli:run_movie_bot'
 
 

@@ -1,7 +1,7 @@
 from kafka import KafkaConsumer
 from json import loads
 
-def create_consumer(topic_name: str, bootstrap_server_list: list) -> KafkaConsumer:    
+def create_consumer(topic_name: str, bootstrap_server_list: list, offset_reset='earliest') -> KafkaConsumer:    
         consumer = KafkaConsumer(
                 topic_name,
                 bootstrap_servers=bootstrap_server_list,

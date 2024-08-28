@@ -4,9 +4,12 @@ from pytxtchat.textual.chat import ChatApp
 from pytxtchat.textual.weather import WeatherApp
 
 from pytxtchat.data.manager import (
-    get_parquet_path, 
-    search_movie,
-    show_group_count)
+        get_parquet_path, 
+        search_movie,
+        show_group_count
+    )
+
+from pytxtchat.bot.movie_bot import run
 
 import typer, fire
 import requests
@@ -54,3 +57,6 @@ def print_search_movie():
 
 def print_group_count():
     typer.run(show_group_count)
+
+def run_movie_bot():
+    typer.run(run)
