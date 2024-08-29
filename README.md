@@ -19,6 +19,11 @@ $ txtchat
 
 ![chatui](https://github.com/user-attachments/assets/acccd899-e264-479c-9450-4030bd5ec0a6)
 
+- run cat bot
+```bash
+$ txtbot living <KAFKA-URL>:9092
+```
+
 - search_movie
 ```
 $ txtsmovie 창동 --column directorNm tablefmt github
